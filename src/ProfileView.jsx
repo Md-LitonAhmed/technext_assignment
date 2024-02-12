@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Cart from "./Cart";
+import Header from "./Header";
 
 export default function ProfileView() {
   const [person, setPerson] = useState();
@@ -19,6 +20,7 @@ export default function ProfileView() {
 
   return (
     <>
+    <Header />
       <div className="flex justify-center items-center mt-10"><h2>Profile View</h2></div>
       { person && <Cart person={person} />}
     </>
