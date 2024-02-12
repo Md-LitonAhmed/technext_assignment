@@ -1,8 +1,12 @@
+import React from 'react'
+import Header from './Header'
 
-export default function ProfileView({user}) {
+export default function Review() {
   return (
-    <div>
-      
-    </div>
+    <>
+    <Header />
+    <div className="flex justify-center items-center h-[520px] ">Review Page</div>
+    </>
+    
   )
 }

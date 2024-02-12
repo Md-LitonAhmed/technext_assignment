@@ -11,9 +11,7 @@ export default function AddTaskModal({onSave, onCloseClick}) {
         city:'',
         state:''
     },
-    company:{
-        name:''
-    }
+    company:''
     
   });
   const handleChange=(e)=>{
@@ -94,7 +92,7 @@ export default function AddTaskModal({onSave, onCloseClick}) {
               className="block w-full rounded-md bg-[#2D323F] px-3 py-2.5"
               type="text"
               name="address"
-              value={task.address}
+              value={task.address.city}
               onChange={handleChange}
               id="address"
               required

@@ -1,6 +1,9 @@
-export default function Cart({ person , onProfile}) {
-  const { id,firstName, lastName, email, address, company, image } = person;
+import { useNavigate } from "react-router-dom";
 
+export default function Cart({ person }) {
+  const { id,firstName, lastName, email, address, company, image } = person;
+  const navigate=useNavigate()
+  console.log(person)
   return (
     <>
       <div className="flex items-center h-screen w-full justify-center">
@@ -60,7 +63,7 @@ export default function Cart({ person , onProfile}) {
               <div className="text-center my-3">
                 <a
                  id={id}
-                onClick={()=>onProfile(id)}
+                onClick={()=>navigate("/profile/" + id)}
                
                   className="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium"
                   href="#"
